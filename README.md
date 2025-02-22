@@ -13,7 +13,7 @@
  3. Set up and configure Azure Virtual Machine Scale Sets.
  4. Adjust the scaling of Azure Virtual Machine Scale Sets.
 
-## Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal
+## Task 1: Deploy Azure virtual machines with zone resilience using the Azure portal.
 
 In this task, you will deploy two Azure virtual machines into different availability zones by using the Azure portal. Availability zones offer the highest level of uptime SLA for virtual machines at 99.99%. To achieve this SLA, you must deploy at least two virtual machines across different availability zones.
 
@@ -27,7 +27,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 8.  Click Next: Advanced >, accept the defaults, then click Review + Create. After validation completes, click Create. Note: Notice as the virtual machine deploys the NIC, disk, and public IP address (if configured) are independently created and managed resources.
 9.  Wait for the deployment to complete, then select Go to resource.
 
-## Task 2: Manage compute and storage scaling for virtual machines
+## Task 2: Manage scaling for compute and storage resources in virtual machines.
 
 In this task, you will scale a virtual machine by adjusting its size to a different SKU. Azure provides flexibility in VM size selection so that you can adjust a VM for periods of time if it needs more (or less) compute and memory allocated. This concept is extended to disks, where you can modify the performance of the disk, or increase the allocated capacity.
 
@@ -43,7 +43,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 10.	In the Disk name drop-down, select the VM1 disk.
 11.	Verify the disk is now diferent. Select Apply to save your changes. Note: You have now created a virtual machine, scaled the SKU and the data disk size. In the next task we use Virtual Machine Scale Sets to automate the scaling process.
 
-## Task 3: Create and configure Azure Virtual Machine Scale Sets
+## Task 3: Set up and configure Azure Virtual Machine Scale Sets.
 
 In this task, you will deploy an Azure virtual machine scale set across availability zones. VM Scale Sets reduce the administrative overhead of automation by enabling you to configure metrics or conditions that allow the scale set to horizontally scale, scale in or scale out.
 
@@ -60,7 +60,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
  11. On the Create a load balancer page, specify the load balancer name and take the defaults. Click Create when you are done then Next : Management >.
  12. In the Management tab, set Boot diagnostics to Disable, then click Next: Health >. Review the default settings in the Health tab and proceed with Next: Advanced >. In the Advanced tab, click Review + Create, ensure validation passes, and click Create. Note: Wait for the virtual machine scale set deployment to complete. This should take approximately 5 minutes.
 
-## Task 4: Scale Azure Virtual Machine Scale Sets
+## Task 4: Adjust the scaling of Azure Virtual Machine Scale Sets.
 
 In this task, you scale the virtual machine scale set using a custom scale rule.
 
@@ -69,6 +69,9 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 3.	Select Custom autoscale. Then change the Scale mode to Scale based on metric. And then select Add a rule.
 4.	Create a rule to automatically scale out VM instances when the average CPU load exceeds 70% over 10 minutes, increasing instances by 20%. Configure: Metric source, Metric namespace (Virtual Machine Host), Metric name (Percentage CPU), Operator (Greater than), Metric threshold (70), Duration (10 minutes), Time grain statistic (Average), Operation (Increase percent by), Cool down (5 minutes), Percentage (50).
 5.	Be sure to Add then Save your changes.
+6.	Create a scale-in rule to decrease the number of VM instances when the average CPU load drops below 30% over a 10-minute period, reducing instances by 20%. Select Add a rule, configure: Operator (Less than), Threshold (30), Operation (Decrease percentage by), Percentage (20), then click Add. Be sure to Save your changes.
+7.	Set the instance limits to ensure autoscale rules don't exceed the maximum or minimum instances. Configure: Minimum (2), Maximum (10), Default (2). These limits are shown on the Scaling page after the rules. Be sure to Save your changes.
+8.	On the scale set page, select Instances. This is where you would monitor the number of virtual machine instances.
 
 
 
