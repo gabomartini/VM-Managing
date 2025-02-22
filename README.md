@@ -1,11 +1,11 @@
 # Virtual Machines Managing
-### In this tutorial, we will:
-### •	Plan for virtual machine implementations.
-### •	Create virtual machines.
-### •	Configure virtual machine availability, including scale sets.
-### 
-### Tasks:
-### •	Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal.
-### •	Task 2: Manage compute and storage scaling for virtual machines.
-### •	Task 3: Create and configure Azure Virtual Machine Scale Sets.
-### •	Task 4: Scale Azure Virtual Machine Scale Sets.
+
+#### In this tutorial, we will:
+#### - Outline the process for setting up virtual machines.
+#### - Deploy virtual machines.
+#### - Configure availability features for virtual machines, including scaling options.
+#### Tasks:
+#### 1. Deploy Azure virtual machines with zone resilience using the Azure portal.
+#### 2. Manage scaling for compute and storage resources in virtual machines.
+#### 3. Set up and configure Azure Virtual Machine Scale Sets.
+#### 4. Adjust the scaling of Azure Virtual Machine Scale Sets.
