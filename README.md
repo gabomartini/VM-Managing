@@ -1,4 +1,8 @@
-# Virtual Machine Management on Azure
+<h1 align="center">Virtual Machine Management on Azure</h1>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3e7c5a02-1ae5-4b1c-8106-55172f3e581c" alt="azure-vms-svgrepo-com" width="150" height="auto">
+</p>
 
 #### *In this tutorial, we will:*
 *- Outline the process for setting up virtual machines.*
