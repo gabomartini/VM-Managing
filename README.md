@@ -18,7 +18,7 @@
 
 ## Task 1: Deploy Azure virtual machines with zone resilience using the Azure portal.
 
-In this task, you will deploy two Azure virtual machines into different availability zones using the Azure portal. Availability zones offer the highest level of uptime SLA for virtual machines at 99.99%. To achieve this SLA, you must deploy at least two virtual machines across different availability zones.
+In this task, you will create two Azure virtual machines and distribute them across different availability zones using the Azure portal. Availability zones ensure maximum uptime, offering a 99.99% SLA. To meet this requirement, you need to deploy at least two VMs in separate zones.
 
 1.	Search for and select "Virtual machines", on the Virtual machines blade, click "+ Create", and then select in the drop-down "Azure virtual machine".
 2.	On the Basics tab, in the Availability zone drop down menu, place a checkmark next to Zone 2. This should select both "Zone 1" and "Zone 2".
@@ -32,7 +32,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
   <img src="https://github.com/user-attachments/assets/36df23cf-a1be-4678-afeb-e77abea961bf">
 </p>
 
-4.   Click "Next: Disks >", then configure: OS disk type, Delete with VM (this helps save costs, simplifies resource management, and ensures a clean environment by automatically removing unused disks), Enable Ultra Disk compatibility.
+4.   Click "Next: Disks >", then configure: OS disk type, Delete with VM (this helps save costs, simplifies resource management, and ensures a clean environment by automatically removing unused disks).
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9e7eee22-a076-47f2-8f7b-7ab0e229dd24">
@@ -46,7 +46,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 ## Task 2: Manage scaling for compute and storage resources in virtual machines.
 
-In this task, you will scale a virtual machine by adjusting its size to a different SKU. Azure provides flexibility in VM size selection so that you can adjust a VM for periods of time if it needs more (or less) compute and memory allocated. This concept is extended to disks, where you can modify the performance of the disk, or increase the allocated capacity.
+In this task, you will resize a virtual machine by selecting a different SKU. Azure allows you to adjust VM specifications as needed, increasing or decreasing compute power and memory. This flexibility also applies to storage, where you can enhance disk performance or expand capacity.
 
 1. On the VM1 virtual machine, in the Availability + scale blade, select "Size".
 2. Set the virtual machine size to DS1_v2 and click "Resize". When prompted, confirm the change. Note: Resizing is also known as vertical scaling, up or down.
@@ -82,7 +82,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 ## Task 3: Set up and configure Azure Virtual Machine Scale Sets.
 
-In this task, you will deploy an Azure virtual machine scale set across availability zones. VM Scale Sets reduce the administrative overhead of automation by enabling you to configure metrics or conditions that allow the scale set to horizontally scale, scale in or scale out.
+In this task, you will set up an Azure virtual machine scale set spanning multiple availability zones. VM Scale Sets streamline automation by letting you define scaling rules based on metrics, enabling automatic expansion or reduction of resources.
 
 1. In the Azure portal, search for and select "Virtual machine scale sets" and, on the Virtual machine scale sets blade, click "+ Create".
 2. On the Basics tab of the Create a virtual machine scale set blade, configure the following settings: Subscription, Resource group, Virtual machine scale set name, Region, Availability zone, Orchestration mode, Security type, Scaling options, Image, Size, Username, Password. Then, go to Networking.
@@ -136,7 +136,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 ## Task 4: Adjust the scaling of Azure Virtual Machine Scale Sets.
 
-In this task, you scale the virtual machine scale set using a custom scale rule.
+In this task, you will modify the scale set by applying a custom scaling rule to adjust resource allocation dynamically.
 
 1.	Select "Go to resource" or search for and select the scale set created before.
 2.	Choose "Availability + Scale" from the left side menu, then choose "Scaling". In this case a Scale out rule.
