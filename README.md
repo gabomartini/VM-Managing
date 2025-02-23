@@ -22,10 +22,14 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 1.	Search for and select Virtual machines, on the Virtual machines blade, click "+ Create", and then select in the drop-down Azure virtual machine.
 2.	On the Basics tab, in the Availability zone drop down menu, place a checkmark next to Zone 2. This should select both Zone 1 and Zone 2.
-3.	On the Basics tab, complete the following settings: Subscription, Resource group, Virtual machine names (Edit names after selecting availability zones), Region, Availability options, Availability zone, Security type, Image, Azure Spot instance, Size, Username, Password, Public inbound ports.
+3.	On the Basics tab, complete the following settings: Subscription, Resource group, Virtual machine names (Edit names after selecting availability zones), Region, Availability options, Availability zone, Security type, Image, Azure Spot instance, Size (in this case a DS2_V3), Username, Password, Public inbound ports.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/2089e15b-d2b1-4ea7-8dd0-e06eab8d7706">
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/36df23cf-a1be-4678-afeb-e77abea961bf">
 </p>
 
 4.  Click Next: Disks >, then configure: OS disk type, Delete with VM, Enable Ultra Disk compatibility.
@@ -45,15 +49,35 @@ In this task, you will deploy two Azure virtual machines into different availabi
 In this task, you will scale a virtual machine by adjusting its size to a different SKU. Azure provides flexibility in VM size selection so that you can adjust a VM for periods of time if it needs more (or less) compute and memory allocated. This concept is extended to disks, where you can modify the performance of the disk, or increase the allocated capacity.
 
 1. On the VM1 virtual machine, in the Availability + scale blade, select Size.
-2. Set the virtual machine size to DS1_v2 and click Resize. When prompted, confirm the change. Note: Choose another size if Standard DS1_v2 is not available. Resizing is also known as vertical scaling, up or down.
+2. Set the virtual machine size to DS1_v2 and click Resize. When prompted, confirm the change. Note: Resizing is also known as vertical scaling, up or down.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2e37a8e3-453b-4bf8-ba77-a2a91014d844">
+</p>
+
 3. In the Settings area, select Disks.
-4.	Under Data disks select + Create and attach a new disk. Configure the settings and click Apply (leave other settings at their default values): Disk name, Storage type, Size.
+4.	Under Data disks select + Create and attach a new disk. Configure the settings and click Apply (leave other settings at their default values): Disk name, Storage type (in this case Standard HDD), Size.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/910cf399-5b64-4f33-9aeb-e8893dda9de0">
+</p>
+
 5.	After the disk has been created, click Detach (if necessary, scroll to the right to view the detach icon), and then click Apply. Note: Detaching removes the disk from the VM but keeps it in storage for later use.
 6.	Search for and select Disks. From the list of disks, select the VM1 disk object. Note: The Overview blade also provides performance and usage information for the disk.
-7.	In the Settings blade, select Size + performance. Set the storage type to another one, and then click Save.
+7.	In the Settings blade, select Size + performance. Set the storage type to Standard SDD, and then click Save.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/31b00845-9db5-4f4f-b45d-efd196c5f8f7">
+</p>
+
 8.	Navigate back to the VM1 virtual machine and select Disks.
 9.	In the Data disk section, select Attach existing disks.
 10.	In the Disk name drop-down, select the VM1 disk.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f1fcfc78-9ff8-4c0a-ba25-bdc454d12ade">
+</p>
+
 11.	Verify the disk is now diferent. Select Apply to save your changes. Note: You have now created a virtual machine, scaled the SKU and the data disk size. In the next task we use Virtual Machine Scale Sets to automate the scaling process.
 
 ## Task 3: Set up and configure Azure Virtual Machine Scale Sets.
