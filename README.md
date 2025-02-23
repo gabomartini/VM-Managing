@@ -18,7 +18,7 @@
 
 ## Task 1: Deploy Azure virtual machines with zone resilience using the Azure portal.
 
-In this task, you will deploy two Azure virtual machines into different availability zones by using the Azure portal. Availability zones offer the highest level of uptime SLA for virtual machines at 99.99%. To achieve this SLA, you must deploy at least two virtual machines across different availability zones.
+In this task, you will deploy two Azure virtual machines into different availability zones using the Azure portal. Availability zones offer the highest level of uptime SLA for virtual machines at 99.99%. To achieve this SLA, you must deploy at least two virtual machines across different availability zones.
 
 1.	Search for and select "Virtual machines", on the Virtual machines blade, click "+ Create", and then select in the drop-down "Azure virtual machine".
 2.	On the Basics tab, in the Availability zone drop down menu, place a checkmark next to Zone 2. This should select both "Zone 1" and "Zone 2".
@@ -38,7 +38,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
   <img src="https://github.com/user-attachments/assets/9e7eee22-a076-47f2-8f7b-7ab0e229dd24">
 </p>
 
-5.  Click "Next: Networking >", take the default values except for: Delete public IP and NIC when VM is deleted. Click "Review + Create". After validation completes, click "Create". Note: Notice as the virtual machine deploys the NIC, disk, and public IP address (if configured) are independently created and managed resources. Wait for the deployment to complete, then select Go to resource.
+5.  Click "Next: Networking >", take the default values except for: Delete public IP and NIC when the VM is deleted (this helps save costs, enhances security, and keeps your Azure environment clean). Click "Review + Create". After validation completes, click "Create". Note: Notice as the virtual machine deploys the NIC, disk, and public IP address (if configured) are independently created and managed resources. Wait for the deployment to complete, then select "Go to resource".
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0bf9762b-eef9-441a-beb9-33fc1d657b83">
@@ -78,7 +78,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
   <img src="https://github.com/user-attachments/assets/f1fcfc78-9ff8-4c0a-ba25-bdc454d12ade">
 </p>
 
-11.	Verify the disk is now diferent. Select "Apply" to save your changes. Note: You have now created a virtual machine, scaled the SKU and the data disk size. In the next task we use Virtual Machine Scale Sets to automate the scaling process.
+11.	Verify the disk is now different. Select "Apply" to save your changes. Note: You have now created a virtual machine, scaled the SKU and the data disk size. In the next task we use Virtual Machine Scale Sets to automate the scaling process.
 
 ## Task 3: Set up and configure Azure Virtual Machine Scale Sets.
 
@@ -124,7 +124,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 <img src="https://github.com/user-attachments/assets/3b0ea859-0477-4867-9d3d-0cb1bd5a24f0">
 </p>
  
- 12. In the Management tab, set Boot diagnostics to Disable (this saves storage costs and reduce the amount of data stored in your Azure account), then click "Review + Create", ensure validation passes, and click "Create". Note: Wait for the virtual machine scale set deployment to complete. This should take approximately 5 minutes.
+ 12. In the Management tab, set Boot diagnostics to Disable (this saves storage costs and reduces the amount of data stored in your Azure account), then click "Review + Create", ensure validation passes, and click "Create". Note: Wait for the virtual machine scale set deployment to complete. This should take approximately 5 minutes.
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/67c2b9e1-5e0c-4725-bf69-bce39306acae">
