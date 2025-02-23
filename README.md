@@ -20,8 +20,8 @@
 
 In this task, you will deploy two Azure virtual machines into different availability zones by using the Azure portal. Availability zones offer the highest level of uptime SLA for virtual machines at 99.99%. To achieve this SLA, you must deploy at least two virtual machines across different availability zones.
 
-1.	Search for and select Virtual machines, on the Virtual machines blade, click "+ Create", and then select in the drop-down Azure virtual machine.
-2.	On the Basics tab, in the Availability zone drop down menu, place a checkmark next to Zone 2. This should select both Zone 1 and Zone 2.
+1.	Search for and select "Virtual machines", on the Virtual machines blade, click "+ Create", and then select in the drop-down "Azure virtual machine".
+2.	On the Basics tab, in the Availability zone drop down menu, place a checkmark next to Zone 2. This should select both "Zone 1" and "Zone 2".
 3.	On the Basics tab, complete the following settings: Subscription, Resource group, Virtual machine names (Edit names after selecting availability zones), Region, Availability options, Availability zone, Security type, Image, Azure Spot instance, Size (in this case a DS2_V3), Username, Password, Public inbound ports.
 
 <p align="center">
@@ -48,50 +48,50 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 In this task, you will scale a virtual machine by adjusting its size to a different SKU. Azure provides flexibility in VM size selection so that you can adjust a VM for periods of time if it needs more (or less) compute and memory allocated. This concept is extended to disks, where you can modify the performance of the disk, or increase the allocated capacity.
 
-1. On the VM1 virtual machine, in the Availability + scale blade, select Size.
+1. On the VM1 virtual machine, in the Availability + scale blade, select "Size".
 2. Set the virtual machine size to DS1_v2 and click "Resize". When prompted, confirm the change. Note: Resizing is also known as vertical scaling, up or down.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/2e37a8e3-453b-4bf8-ba77-a2a91014d844">
 </p>
 
-3. In the Settings area, select Disks.
-4.	Under Data disks select + Create and attach a new disk. Configure the settings and click "Apply" (leave other settings at their default values): Disk name, Storage type (in this case Standard HDD), Size.
+3. In the Settings area, select "Disks".
+4.	Under Data disks select "+ Create" and "attach a new disk". Configure the settings and click "Apply" (leave other settings at their default values): Disk name, Storage type (in this case Standard HDD), Size.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/910cf399-5b64-4f33-9aeb-e8893dda9de0">
 </p>
 
 5.	After the disk has been created, click "Detach" (if necessary, scroll to the right to view the detach icon), and then click "Apply". Note: Detaching removes the disk from the VM but keeps it in storage for later use.
-6.	Search for and select Disks. From the list of disks, select the VM1 disk object. Note: The Overview blade also provides performance and usage information for the disk.
-7.	In the Settings blade, select Size + performance. Set the storage type to Standard SDD, and then click "Save".
+6.	Search for and select "Disks". From the list of disks, select the VM1 disk object. Note: The Overview blade also provides performance and usage information for the disk.
+7.	In the Settings blade, select "Size + performance". Set the storage type to Standard SDD, and then click "Save".
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/31b00845-9db5-4f4f-b45d-efd196c5f8f7">
 </p>
 
-8.	Navigate back to the VM1 virtual machine and select Disks.
-9.	In the Data disk section, select Attach existing disks.
+8.	Navigate back to the VM1 virtual machine and select "Disks".
+9.	In the Data disk section, select "Attach existing disks".
 10.	In the Disk name drop-down, select the VM1 disk.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f1fcfc78-9ff8-4c0a-ba25-bdc454d12ade">
 </p>
 
-11.	Verify the disk is now diferent. Select Apply to save your changes. Note: You have now created a virtual machine, scaled the SKU and the data disk size. In the next task we use Virtual Machine Scale Sets to automate the scaling process.
+11.	Verify the disk is now diferent. Select "Apply" to save your changes. Note: You have now created a virtual machine, scaled the SKU and the data disk size. In the next task we use Virtual Machine Scale Sets to automate the scaling process.
 
 ## Task 3: Set up and configure Azure Virtual Machine Scale Sets.
 
 In this task, you will deploy an Azure virtual machine scale set across availability zones. VM Scale Sets reduce the administrative overhead of automation by enabling you to configure metrics or conditions that allow the scale set to horizontally scale, scale in or scale out.
 
- 1. In the Azure portal, search for and select Virtual machine scale sets and, on the Virtual machine scale sets blade, click "+ Create".
+ 1. In the Azure portal, search for and select "Virtual machine scale sets" and, on the Virtual machine scale sets blade, click "+ Create".
  2. On the Basics tab of the Create a virtual machine scale set blade, configure the following settings: Subscription, Resource group, Virtual machine scale set name, Region, Availability zone, Orchestration mode, Security type, Scaling options, Image, Size, Username, Password. Then, go to Networking.
  
  <p align="center">
   <img src="https://github.com/user-attachments/assets/9ba5f87e-06f1-41d9-8e58-7298bad1ede8">
 </p>
 
- 3. On the Networking page, click the "Edit virtual network" link below the Virtual network textbox and create a new virtual network, when finished, select OK: Network Name, Address range	10.82.0.0/20, Subnetwork name, Subnet range	10.82.0.0/24.
+ 3. On the Networking page, click the "Edit virtual network" link below the Virtual network textbox and create a new virtual network, when finished, select "OK": Network Name, Address range	10.82.0.0/20, Subnetwork name, Subnet range	10.82.0.0/24.
 
  <p align="center">
   <img src="https://github.com/user-attachments/assets/07655f4c-3c00-4960-ba6a-cfba3914ed43">
@@ -102,7 +102,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 </p>
  
  4. In the Networking tab, click the "Edit network interface" icon to the right of the network interface entry.
- 5. For NIC network security group section, select Advanced and then click "Create new" under the Configure network security group drop-down list.
+ 5. For NIC network security group section, select "Advanced" and then click "Create new" under the Configure network security group drop-down list.
 
   <p align="center">
   <img src="https://github.com/user-attachments/assets/7b68c08e-aad1-4702-82dd-0563f03e8120">
@@ -124,25 +124,28 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 <img src="https://github.com/user-attachments/assets/3b0ea859-0477-4867-9d3d-0cb1bd5a24f0">
 </p>
  
- 12. In the Management tab, set Boot diagnostics to Disable, then click "Review + Create", ensure validation passes, and click "Create". Note: Wait for the virtual machine scale set deployment to complete. This should take approximately 5 minutes.
+ 12. In the Management tab, set Boot diagnostics to Disable (this saves storage costs and reduce the amount of data stored in your Azure account), then click "Review + Create", ensure validation passes, and click "Create". Note: Wait for the virtual machine scale set deployment to complete. This should take approximately 5 minutes.
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/67c2b9e1-5e0c-4725-bf69-bce39306acae">
+</p>
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/28efbc7f-7dfa-47eb-aa05-030e643c509e">
 </p>
 
-
 ## Task 4: Adjust the scaling of Azure Virtual Machine Scale Sets.
 
 In this task, you scale the virtual machine scale set using a custom scale rule.
 
-1.	Select Go to resource or search for and select the scale set created before.
+1.	Select "Go to resource" or search for and select the scale set created before.
 2.	Choose Availability + Scale from the left side menu, then choose Scaling. In this case a Scale out rule.
-3.	Select Custom autoscale. Then change the Scale mode to Scale based on metric. And then select Add a rule.
+3.	Select "Custom autoscale". Then change the Scale mode to "Scale based on metric". And then select "Add a rule".
 4.	Create a rule to automatically scale out VM instances when the average CPU load exceeds 70% over 10 minutes, increasing instances by 20%. Configure: Metric source, Metric namespace (Virtual Machine Host), Metric name (Percentage CPU), Operator (Greater than), Metric threshold (70), Duration (10 minutes), Time grain statistic (Average), Operation (Increase percent by), Cool down (5 minutes), Percentage (50).
 5.	Be sure to Add then Save your changes.
-6.	Create a scale-in rule to decrease the number of VM instances when the average CPU load drops below 30% over a 10-minute period, reducing instances by 20%. Select Add a rule, configure: Operator (Less than), Threshold (30), Operation (Decrease percentage by), Percentage (20), then click "Add". Be sure to Save your changes.
+6.	Create a scale-in rule to decrease the number of VM instances when the average CPU load drops below 30% over a 10-minute period, reducing instances by 20%. Select "Add a rule", configure: Operator (Less than), Threshold (30), Operation (Decrease percentage by), Percentage (20), then click "Add". Be sure to Save your changes.
 7.	Set the instance limits to ensure autoscale rules don't exceed the maximum or minimum instances. Configure: Minimum (2), Maximum (10), Default (2). These limits are shown on the Scaling page after the rules. Be sure to Save your changes.
-8.	On the scale set page, select Instances. This is where you would monitor the number of virtual machine instances.
+8.	On the scale set page, select "Instances". This is where you would monitor the number of virtual machine instances.
 
 
 
