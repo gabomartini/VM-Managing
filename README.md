@@ -32,7 +32,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
   <img src="https://github.com/user-attachments/assets/36df23cf-a1be-4678-afeb-e77abea961bf">
 </p>
 
-4.   Next: Disks >, then configure: OS disk type, Delete with VM, Enable Ultra Disk compatibility.
+4.   Click "Next: Disks >", then configure: OS disk type, Delete with VM (this helps save costs, simplifies resource management, and ensures a clean environment by automatically removing unused disks), Enable Ultra Disk compatibility.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9e7eee22-a076-47f2-8f7b-7ab0e229dd24">
@@ -118,7 +118,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 8. Click "Add" and, back on the Create network security group blade, click "OK".
 9. In the Edit network interface blade, in the Public IP address section, click "Enabled" and click "OK".
 10. In the Networking tab, under the Load balancing section, configure: Load balancing options (Azure load balancer), Select a load balancer (Create a load balancer).
-11. On the Create a load balancer page, specify the load balancer name and take the defaults. Click "Create", when you are done then Next : Management >.
+11. On the Create a load balancer page, specify the load balancer name and take the defaults. Click "Create", when you are done then "Next : Management >".
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/3b0ea859-0477-4867-9d3d-0cb1bd5a24f0">
