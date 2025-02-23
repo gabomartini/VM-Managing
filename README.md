@@ -84,18 +84,52 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 In this task, you will deploy an Azure virtual machine scale set across availability zones. VM Scale Sets reduce the administrative overhead of automation by enabling you to configure metrics or conditions that allow the scale set to horizontally scale, scale in or scale out.
 
- 1. In the Azure portal, search for and select Virtual machine scale sets and, on the Virtual machine scale sets blade, click + Create.
- 2. On the Basics tab of the Create a virtual machine scale set blade, configure the following settings: Subscription, Resource group, Virtual machine scale set name, Region, Availability zone, Orchestration mode, Security type, Scaling options (review defaults), Image, Run with Azure Spot discount, Size, Username, Password, Already have a Windows Server license. Then, click Next: Spot >.
- 3. On the Networking page, click the Edit virtual network link below the Virtual network textbox and create a new virtual network with the following settings (leave others with their default values). When finished, select OK: Network Name, Address range	10.82.0.0/20, Subnetwork name, Subnet range	10.82.0.0/24.
+ 1. In the Azure portal, search for and select Virtual machine scale sets and, on the Virtual machine scale sets blade, click "+ Create".
+ 2. On the Basics tab of the Create a virtual machine scale set blade, configure the following settings: Subscription, Resource group, Virtual machine scale set name, Region, Availability zone, Orchestration mode, Security type, Scaling options, Image, Size, Username, Password. Then, go to Networking.
+ 
+ <p align="center">
+  <img src="https://github.com/user-attachments/assets/9ba5f87e-06f1-41d9-8e58-7298bad1ede8">
+</p>
+
+ 3. On the Networking page, click the "Edit virtual network" link below the Virtual network textbox and create a new virtual network, when finished, select OK: Network Name, Address range	10.82.0.0/20, Subnetwork name, Subnet range	10.82.0.0/24.
+
+ <p align="center">
+  <img src="https://github.com/user-attachments/assets/07655f4c-3c00-4960-ba6a-cfba3914ed43">
+</p>
+
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/abe24ea9-a842-4445-96cb-c6e12774f218">
+</p>
+ 
  4. In the Networking tab, click the Edit network interface icon to the right of the network interface entry.
  5. For NIC network security group section, select Advanced and then click Create new under the Configure network security group drop-down list.
+
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/7b68c08e-aad1-4702-82dd-0563f03e8120">
+</p>
+
  6. On the Create network security group blade, specify the name (leave others with their default values).
  7. Click Add an inbound rule and configure: Source (Any), Source port ranges (*), Destination (Any), Service (HTTP), Action (Allow), Priority (1010), Name (allow-http), then save the rule.
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/97806a72-e444-4796-98d6-fae8be17016c">
+</p>
+ 
  8. Click Add and, back on the Create network security group blade, click OK.
  9. In the Edit network interface blade, in the Public IP address section, click Enabled and click OK.
  10. In the Networking tab, under the Load balancing section, configure: Load balancing options (Azure load balancer), Select a load balancer (Create a load balancer).
  11. On the Create a load balancer page, specify the load balancer name and take the defaults. Click Create when you are done then Next : Management >.
- 12. In the Management tab, set Boot diagnostics to Disable, then click Next: Health >. Review the default settings in the Health tab and proceed with Next: Advanced >. In the Advanced tab, click Review + Create, ensure validation passes, and click Create. Note: Wait for the virtual machine scale set deployment to complete. This should take approximately 5 minutes.
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/3b0ea859-0477-4867-9d3d-0cb1bd5a24f0">
+</p>
+ 
+ 12. In the Management tab, set Boot diagnostics to Disable, then click Review + Create, ensure validation passes, and click Create. Note: Wait for the virtual machine scale set deployment to complete. This should take approximately 5 minutes.
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/28efbc7f-7dfa-47eb-aa05-030e643c509e">
+</p>
+
 
 ## Task 4: Adjust the scaling of Azure Virtual Machine Scale Sets.
 
