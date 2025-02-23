@@ -32,13 +32,13 @@ In this task, you will deploy two Azure virtual machines into different availabi
   <img src="https://github.com/user-attachments/assets/36df23cf-a1be-4678-afeb-e77abea961bf">
 </p>
 
-4.  Click Next: Disks >, then configure: OS disk type, Delete with VM, Enable Ultra Disk compatibility.
+4.   Next: Disks >, then configure: OS disk type, Delete with VM, Enable Ultra Disk compatibility.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9e7eee22-a076-47f2-8f7b-7ab0e229dd24">
 </p>
 
-5.  Click Next: Networking >, take the default values except for: Delete public IP and NIC when VM is deleted. Click Review + Create. After validation completes, click Create. Note: Notice as the virtual machine deploys the NIC, disk, and public IP address (if configured) are independently created and managed resources. Wait for the deployment to complete, then select Go to resource.
+5.  Click "Next: Networking >", take the default values except for: Delete public IP and NIC when VM is deleted. Click "Review + Create". After validation completes, click "Create". Note: Notice as the virtual machine deploys the NIC, disk, and public IP address (if configured) are independently created and managed resources. Wait for the deployment to complete, then select Go to resource.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0bf9762b-eef9-441a-beb9-33fc1d657b83">
@@ -49,22 +49,22 @@ In this task, you will deploy two Azure virtual machines into different availabi
 In this task, you will scale a virtual machine by adjusting its size to a different SKU. Azure provides flexibility in VM size selection so that you can adjust a VM for periods of time if it needs more (or less) compute and memory allocated. This concept is extended to disks, where you can modify the performance of the disk, or increase the allocated capacity.
 
 1. On the VM1 virtual machine, in the Availability + scale blade, select Size.
-2. Set the virtual machine size to DS1_v2 and click Resize. When prompted, confirm the change. Note: Resizing is also known as vertical scaling, up or down.
+2. Set the virtual machine size to DS1_v2 and click "Resize". When prompted, confirm the change. Note: Resizing is also known as vertical scaling, up or down.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/2e37a8e3-453b-4bf8-ba77-a2a91014d844">
 </p>
 
 3. In the Settings area, select Disks.
-4.	Under Data disks select + Create and attach a new disk. Configure the settings and click Apply (leave other settings at their default values): Disk name, Storage type (in this case Standard HDD), Size.
+4.	Under Data disks select + Create and attach a new disk. Configure the settings and click "Apply" (leave other settings at their default values): Disk name, Storage type (in this case Standard HDD), Size.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/910cf399-5b64-4f33-9aeb-e8893dda9de0">
 </p>
 
-5.	After the disk has been created, click Detach (if necessary, scroll to the right to view the detach icon), and then click Apply. Note: Detaching removes the disk from the VM but keeps it in storage for later use.
+5.	After the disk has been created, click "Detach" (if necessary, scroll to the right to view the detach icon), and then click "Apply". Note: Detaching removes the disk from the VM but keeps it in storage for later use.
 6.	Search for and select Disks. From the list of disks, select the VM1 disk object. Note: The Overview blade also provides performance and usage information for the disk.
-7.	In the Settings blade, select Size + performance. Set the storage type to Standard SDD, and then click Save.
+7.	In the Settings blade, select Size + performance. Set the storage type to Standard SDD, and then click "Save".
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/31b00845-9db5-4f4f-b45d-efd196c5f8f7">
@@ -101,30 +101,30 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
   <img src="https://github.com/user-attachments/assets/abe24ea9-a842-4445-96cb-c6e12774f218">
 </p>
  
- 4. In the Networking tab, click the Edit network interface icon to the right of the network interface entry.
- 5. For NIC network security group section, select Advanced and then click Create new under the Configure network security group drop-down list.
+ 4. In the Networking tab, click the "Edit network interface" icon to the right of the network interface entry.
+ 5. For NIC network security group section, select Advanced and then click "Create new" under the Configure network security group drop-down list.
 
   <p align="center">
   <img src="https://github.com/user-attachments/assets/7b68c08e-aad1-4702-82dd-0563f03e8120">
 </p>
 
  6. On the Create network security group blade, specify the name (leave others with their default values).
- 7. Click Add an inbound rule and configure: Source (Any), Source port ranges (*), Destination (Any), Service (HTTP), Action (Allow), Priority (1010), Name (allow-http), then save the rule.
+ 7. Click "Add an inbound rule" and configure: Source (Any), Source port ranges (*), Destination (Any), Service (HTTP), Action (Allow), Priority (1010), Name (allow-http), then save the rule.
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/97806a72-e444-4796-98d6-fae8be17016c">
 </p>
  
- 8. Click Add and, back on the Create network security group blade, click OK.
- 9. In the Edit network interface blade, in the Public IP address section, click Enabled and click OK.
+ 8. Click "Add" and, back on the Create network security group blade, click "OK".
+ 9. In the Edit network interface blade, in the Public IP address section, click "Enabled" and click "OK".
  10. In the Networking tab, under the Load balancing section, configure: Load balancing options (Azure load balancer), Select a load balancer (Create a load balancer).
- 11. On the Create a load balancer page, specify the load balancer name and take the defaults. Click Create when you are done then Next : Management >.
+ 11. On the Create a load balancer page, specify the load balancer name and take the defaults. Click "Create", when you are done then Next : Management >.
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/3b0ea859-0477-4867-9d3d-0cb1bd5a24f0">
 </p>
  
- 12. In the Management tab, set Boot diagnostics to Disable, then click Review + Create, ensure validation passes, and click Create. Note: Wait for the virtual machine scale set deployment to complete. This should take approximately 5 minutes.
+ 12. In the Management tab, set Boot diagnostics to Disable, then click "Review + Create", ensure validation passes, and click "Create". Note: Wait for the virtual machine scale set deployment to complete. This should take approximately 5 minutes.
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/28efbc7f-7dfa-47eb-aa05-030e643c509e">
@@ -140,7 +140,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 3.	Select Custom autoscale. Then change the Scale mode to Scale based on metric. And then select Add a rule.
 4.	Create a rule to automatically scale out VM instances when the average CPU load exceeds 70% over 10 minutes, increasing instances by 20%. Configure: Metric source, Metric namespace (Virtual Machine Host), Metric name (Percentage CPU), Operator (Greater than), Metric threshold (70), Duration (10 minutes), Time grain statistic (Average), Operation (Increase percent by), Cool down (5 minutes), Percentage (50).
 5.	Be sure to Add then Save your changes.
-6.	Create a scale-in rule to decrease the number of VM instances when the average CPU load drops below 30% over a 10-minute period, reducing instances by 20%. Select Add a rule, configure: Operator (Less than), Threshold (30), Operation (Decrease percentage by), Percentage (20), then click Add. Be sure to Save your changes.
+6.	Create a scale-in rule to decrease the number of VM instances when the average CPU load drops below 30% over a 10-minute period, reducing instances by 20%. Select Add a rule, configure: Operator (Less than), Threshold (30), Operation (Decrease percentage by), Percentage (20), then click "Add". Be sure to Save your changes.
 7.	Set the instance limits to ensure autoscale rules don't exceed the maximum or minimum instances. Configure: Minimum (2), Maximum (10), Default (2). These limits are shown on the Scaling page after the rules. Be sure to Save your changes.
 8.	On the scale set page, select Instances. This is where you would monitor the number of virtual machine instances.
 
